@@ -1,0 +1,14 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\Tsun Man\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.0.7
+[debug] Platform:     win32
+[debug] Node Version: v4.4.7
+[debug] Time:         Sun Sep 04 2016 10:36:14 GMT+0800 (中國標準時間)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Users\Tsun Man\Documents\Other_Learning\Personal_Website_Firebase
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
