@@ -10,7 +10,7 @@ firebase.initializeApp(config);
 var app = angular.module("personalWebsite", ["firebase"]);
 
 app.controller("index", function($scope, $firebaseObject) {
-    var ref = firebase.database().ref();
+    var infoRef = firebase.database().ref().child("personalInfo");
 
-    $scope.data = $firebaseObject(ref);
+    $firebaseObject(infoRef).$bindTo($scope, "personalInfo");
 });
