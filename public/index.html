@@ -12,18 +12,14 @@
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
 
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBusUYHBkszu_U47fZ8dE3skkERoia8M-U",
-        authDomain: "personal-website-3a4ec.firebaseapp.com",
-        databaseURL: "https://personal-website-3a4ec.firebaseio.com",
-        storageBucket: "",
-      };
-      firebase.initializeApp(config);
-    </script>
-</head>
-<body>
 
+    <script type="text/javascript" src="/app.js"></script>
+</head>
+<body ng-app="personalWebsite">
+    <div ng-controller="index">
+        <pre>
+{{data}}
+        </pre>
+    </div>
 </body>
 </html>
