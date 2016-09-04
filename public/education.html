@@ -28,6 +28,40 @@
 
     <div ng-controller="education">
         <h1>Education</h1>
+
+        <h2>High School</h2>
+        <div>
+            <h3>{{highSchool.name}}</h3>
+
+            <ul>
+                <li ng-repeat="subject in highSchool.subjects">{{subject}}</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>University</h2>
+        <div ng-repeat="university in universities">
+            <h3>{{university.name}}</h3>
+
+            <h4>{{university.degree}}</h4>
+            <h4>{{university.major}}</h4>
+
+            <ul>
+                <li ng-repeat="course in university.courses">{{course}}</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>Online Courses</h2>
+        <div ng-repeat="onlineCourse in onlineCourses">
+            <h3>{{onlineCourse.name}}</h3>
+
+            <ul>
+                <li ng-repeat="course in onlineCourse.courses">{{course}}</li>
+            </ul>
+        </div>
     </div>
 
     <script type="text/javascript" src="/js/education.js"></script>

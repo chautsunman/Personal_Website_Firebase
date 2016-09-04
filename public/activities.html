@@ -28,6 +28,26 @@
 
     <div ng-controller="activities">
         <h1>Activities</h1>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Activity</td>
+                        <td>Organizer</td>
+                        <td>Post</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="activity in activities">
+                        <td>{{activity.activity}}</td>
+                        <td>{{activity.organizer}}</td>
+                        <td>{{activity.post}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script type="text/javascript" src="/js/activities.js"></script>
