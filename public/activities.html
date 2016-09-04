@@ -1,57 +1,23 @@
-<html>
-<head>
-    <title>Man's Personal Website</title>
+<div>
+    <h1>Activities</h1>
 
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Activity</td>
+                    <td>Organizer</td>
+                    <td>Post</td>
+                </tr>
+            </thead>
 
-    <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.min.js"></script>
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-    <!-- Initialize Firebase and AngularJS -->
-    <script type="text/javascript" src="/js/app.js"></script>
-</head>
-<body ng-app="personalWebsite">
-    <div ng-include="'nav.html'"></div>
-
-    <div ng-controller="activities">
-        <h1>Activities</h1>
-
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <td>Activity</td>
-                        <td>Organizer</td>
-                        <td>Post</td>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr ng-repeat="activity in activities">
-                        <td>{{activity.activity}}</td>
-                        <td>{{activity.organizer}}</td>
-                        <td>{{activity.post}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <tbody>
+                <tr ng-repeat="activity in activities">
+                    <td>{{activity.activity}}</td>
+                    <td>{{activity.organizer}}</td>
+                    <td>{{activity.post}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-    <script type="text/javascript" src="/js/activities.js"></script>
-</body>
-</html>
-
-
+</div>

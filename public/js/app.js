@@ -8,4 +8,32 @@ var config = {
 firebase.initializeApp(config);
 
 // Create an AngularJS app
-var app = angular.module("personalWebsite", ["firebase"]);
+var app = angular.module("personalWebsite", ["ngRoute", "firebase"]);
+
+// routing
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl: "home.html",
+        controller: "home"
+    })
+    .when("/index", {
+        templateUrl: "home.html",
+        controller: "home"
+    })
+    .when("/home", {
+        templateUrl: "home.html",
+        controller: "home"
+    })
+    .when("/education", {
+        templateUrl: "education.html",
+        controller: "education"
+    })
+    .when("/activities", {
+        templateUrl: "activities.html",
+        controller: "activities"
+    })
+    .otherwise({
+        template: "Error"
+    });
+});
