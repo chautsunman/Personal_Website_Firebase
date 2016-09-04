@@ -7,10 +7,5 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// Create an AngularJS app
 var app = angular.module("personalWebsite", ["firebase"]);
-
-app.controller("index", function($scope, $firebaseObject) {
-    var infoRef = firebase.database().ref().child("personalInfo");
-
-    $firebaseObject(infoRef).$bindTo($scope, "personalInfo");
-});
