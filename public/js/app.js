@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 var app = angular.module("personalWebsite", ["ngRoute", "firebase"]);
 
 // routing
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl: "home.html",
@@ -35,5 +35,10 @@ app.config(function($routeProvider) {
     })
     .otherwise({
         template: "Error"
+    });
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
     });
 });

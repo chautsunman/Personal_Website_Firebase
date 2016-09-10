@@ -1,4 +1,4 @@
-app.controller("education", function($scope, $firebaseObject) {
+app.controller("education", function($scope, $firebaseObject, $firebaseArray) {
     // select the correct navbar element
     $("#navbar li").removeClass("active");
     $("#navbar #navbar-education").addClass("active");
@@ -8,6 +8,12 @@ app.controller("education", function($scope, $firebaseObject) {
     var onlineRef = firebase.database().ref().child("education").child("onlineCourses");
 
     $firebaseObject(highSchoolRef).$bindTo($scope, "highSchool");
-    $firebaseObject(universityRef).$bindTo($scope, "universities");
-    $firebaseObject(onlineRef).$bindTo($scope, "onlineCourses");
+    $scope.universities = $firebaseArray(universityRef);
+    $scope.onlineCourses = $firebaseArray(onlineRef);
+
+    // initialize each tab
+    $(".nav a").click(function (e) {
+      e.preventDefault();
+      $(this).tab("show");
+    });
 });
