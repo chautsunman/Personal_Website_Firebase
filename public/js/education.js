@@ -11,9 +11,15 @@ app.controller("education", function($scope, $firebaseObject, $firebaseArray) {
     $scope.universities = $firebaseArray(universityRef);
     $scope.onlineCourses = $firebaseArray(onlineRef);
 
-    // initialize each tab
-    $(".nav a").click(function (e) {
-      e.preventDefault();
-      $(this).tab("show");
+    $("#highSchool>h2").click(function() {
+        $("#highSchool>div").slideToggle("slow");
+    });
+
+    $("#universities>h2").click(function() {
+        $("#universities>div").slideToggle("slow");
+    });
+
+    $("#onlineCourses>h2").click(function() {
+        $("#onlineCourses>div").slideToggle("slow");
     });
 });

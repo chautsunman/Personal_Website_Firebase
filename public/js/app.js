@@ -37,8 +37,5 @@ app.config(function($routeProvider, $locationProvider) {
         template: "Error"
     });
 
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
+    $locationProvider.html5Mode(true);
 });

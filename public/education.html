@@ -1,50 +1,38 @@
 <div>
     <h1>Education</h1>
 
-    <div>
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation">
-                <a href="#highSchool" aria-controls="highSchool" role="tab" data-toggle="tab">High School</a>
-            </li>
-            <li role="presentation" class="active">
-                <a href="#university" aria-controls="university" role="tab" data-toggle="tab">University / College</a>
-            </li>
-            <li role="presentation">
-                <a href="#online" aria-controls="online" role="tab" data-toggle="tab">Online Courses</a>
-            </li>
-        </ul>
+    <div id="highSchool">
+        <h2>High School</h2>
 
-        <div class="tab-content">
-            <div id="highSchool" class="tab-pane" role="tabpanel">
-                <div>
-                    <h3>{{highSchool.name}}</h3>
+        <div>
+            <h3>{{highSchool.name}}</h3>
+            <ul>
+                <li ng-repeat="subject in highSchool.subjects">{{subject}}</li>
+            </ul>
+        </div>
+    </div>
 
-                    <ul>
-                        <li ng-repeat="subject in highSchool.subjects">{{subject}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="university" class="tab-pane active" role="tabpanel">
-                <div ng-repeat="university in universities">
-                    <h3>{{university.name}}</h3>
+    <div id="universities">
+        <h2>University / College</h2>
 
-                    <h4>{{university.degree}}</h4>
-                    <h4>{{university.major}}</h4>
+        <div ng-repeat="university in universities">
+            <h3>{{university.name}}</h3>
+            <h4>{{university.degree}}</h4>
+            <h4>{{university.major}}</h4>
+            <ul>
+                <li ng-repeat="course in university.courses">{{course}}</li>
+            </ul>
+        </div>
+    </div>
 
-                    <ul>
-                        <li ng-repeat="course in university.courses">{{course}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="online" class="tab-pane" role="tabpanel">
-                <div ng-repeat="onlineCourse in onlineCourses">
-                    <h3>{{onlineCourse.name}}</h3>
+    <div id="onlineCourses">
+        <h2>Online Courses</h2>
 
-                    <ul>
-                        <li ng-repeat="course in onlineCourse.courses">{{course}}</li>
-                    </ul>
-                </div>
-            </div>
+        <div ng-repeat="onlineCourse in onlineCourses">
+            <h3>{{onlineCourse.name}}</h3>
+            <ul>
+                <li ng-repeat="course in onlineCourse.courses">{{course}}</li>
+            </ul>
         </div>
     </div>
 </div>
