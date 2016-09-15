@@ -1,7 +1,6 @@
 app.controller("education", function($scope, $firebaseObject, $firebaseArray) {
-    // select the correct navbar element
-    $("#navbar li").removeClass("active");
-    $("#navbar #navbar-education").addClass("active");
+    // header title
+    $("header .mdl-layout__title").html("Education");
 
     var highSchoolRef = firebase.database().ref().child("education").child("highSchool");
     var universityRef = firebase.database().ref().child("education").child("universities");

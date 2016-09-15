@@ -1,7 +1,6 @@
 app.controller("home", function($scope, $firebaseObject) {
-    // select the correct navbar element
-    $("#navbar li").removeClass("active");
-    $("#navbar #navbar-home").addClass("active");
+    // header title
+    $("header .mdl-layout__title").html("Home");
 
     var infoRef = firebase.database().ref().child("personalInfo");
 

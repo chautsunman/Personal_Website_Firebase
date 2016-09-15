@@ -1,7 +1,6 @@
 app.controller("activities", function($scope, $firebaseObject) {
-    // select the correct navbar element
-    $("#navbar li").removeClass("active");
-    $("#navbar #navbar-activities").addClass("active");
+    // header title
+    $("header .mdl-layout__title").html("Activities");
 
     var activityRef = firebase.database().ref().child("activities");
 
