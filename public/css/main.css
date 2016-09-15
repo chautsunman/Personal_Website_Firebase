@@ -1,0 +1,12 @@
+.mdl-layout__content>div {
+    padding: 0px 32px;
+}
+
+.mdl-layout__drawer .mdl-layout__title {
+    line-height: 32px;
+    margin-top: 16px;
+}
+
+.mdl-layout__drawer-button>i {
+    margin-top: 12px;
+}
