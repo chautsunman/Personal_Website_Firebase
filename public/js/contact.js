@@ -3,4 +3,8 @@ app.controller("contact", function($scope) {
         // header title
         $("header .mdl-layout__title").html("Contact Me");
     });
+
+    $scope.submit = function() {
+
+    };
 });

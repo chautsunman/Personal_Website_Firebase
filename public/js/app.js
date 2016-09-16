@@ -8,7 +8,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Create an AngularJS app
-var app = angular.module("personalWebsite", ["ngRoute", "firebase"]);
+var app = angular.module("personalWebsite", ["ngRoute", "firebase", "ngMaterial", "ngMessages"]);
 
 // routing
 app.config(function($routeProvider, $locationProvider) {
