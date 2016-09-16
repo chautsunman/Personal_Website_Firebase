@@ -1,21 +1,18 @@
-<div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Activity</td>
-                    <td>Organizer</td>
-                    <td>Post</td>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr ng-repeat="activity in activities">
-                    <td>{{activity.activity}}</td>
-                    <td>{{activity.organizer}}</td>
-                    <td>{{activity.post}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div id="activities">
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--8dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Activity</th>
+                <th class="mdl-data-table__cell--non-numeric">Organizer</th>
+                <th class="mdl-data-table__cell--non-numeric">Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="activity in activities">
+                <td class="mdl-data-table__cell--non-numeric">{{activity.name}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{activity.organizer}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{activity.post}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

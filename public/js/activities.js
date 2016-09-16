@@ -1,4 +1,4 @@
-app.controller("activities", function($scope, $firebaseObject) {
+app.controller("activities", function($scope, $firebaseArray) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Activities");
@@ -6,5 +6,5 @@ app.controller("activities", function($scope, $firebaseObject) {
 
     var activityRef = firebase.database().ref().child("activities");
 
-    $firebaseObject(activityRef).$bindTo($scope, "activities");
+    $scope.activities = $firebaseArray(activityRef);
 });
