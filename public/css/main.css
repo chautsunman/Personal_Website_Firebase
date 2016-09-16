@@ -43,6 +43,11 @@
 }
 
 
-#contact form {
+#contact .row {
     margin-top: 16px;
+}
+
+#contact .mdl-card {
+    width: 100%;
+    margin-bottom: 16px;
 }

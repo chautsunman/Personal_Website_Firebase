@@ -1,27 +1,43 @@
 <div id="contact">
-    <form name="contactForm" action="#">
-        <md-input-container>
-            <label>Name *</label>
-            <input type="text" ng-model="name" name="name" required />
-            <div ng-messages="contactForm.name.$error">
-                <div ng-message="required">This is required!</div>
-            </div>
-        </md-input-container>
+    <div class="row">
+        <div class="col-md-6">
+            <form name="contactForm" action="#">
+                <md-input-container>
+                    <label>Name *</label>
+                    <input type="text" ng-model="name" name="name" required />
+                    <div ng-messages="contactForm.name.$error">
+                        <div ng-message="required">This is required!</div>
+                    </div>
+                </md-input-container>
 
-        <md-input-container>
-            <label>Email *</label>
-            <input type="text" ng-model="email" name="email" required ng-pattern="/^.+@.+\..+$/" />
-            <div ng-messages="contactForm.email.$error">
-                <div ng-message="required">This is required!</div>
-                <div ng-message="pattern">Email format only (e.g. tmchau@connect.ust.hk)</div>
-            </div>
-        </md-input-container>
+                <md-input-container>
+                    <label>Email *</label>
+                    <input type="text" ng-model="email" name="email" required ng-pattern="/^.+@.+\..+$/" />
+                    <div ng-messages="contactForm.email.$error">
+                        <div ng-message="required">This is required!</div>
+                        <div ng-message="pattern">Email format only (e.g. tmchau@connect.ust.hk)</div>
+                    </div>
+                </md-input-container>
 
-        <!-- <md-input-container>
-            <label>Message *</label>
-            <textarea type="text" ng-model="message" name="message" required />
-        </md-input-container> -->
+                <!-- <md-input-container>
+                    <label>Message *</label>
+                    <textarea type="text" ng-model="message" name="message" required />
+                </md-input-container> -->
 
-        <md-button ng-click="submit()" class="md-accent md-raised">Submit</md-button>
-    </form>
+                <md-button ng-click="submit()" class="md-accent md-raised">Submit</md-button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <md-list>
+                <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages">
+                    <div class="md-list-item-text">
+                        <h3>{{message.name}} ({{message.email}})</h3>
+                        <h4>{{message.subject}}</h4>
+                        <p>{{message.body}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+    </div>
 </div>
