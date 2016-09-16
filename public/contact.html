@@ -1,7 +1,7 @@
 <div id="contact">
     <div class="row">
         <div class="col-md-6">
-            <form name="contactForm" action="#">
+            <form id="contactForm" name="contactForm" action="#">
                 <md-input-container>
                     <label>Name *</label>
                     <input type="text" ng-model="name" name="name" required />
@@ -19,18 +19,26 @@
                     </div>
                 </md-input-container>
 
-                <!-- <md-input-container>
-                    <label>Message *</label>
-                    <textarea type="text" ng-model="message" name="message" required />
-                </md-input-container> -->
+                <md-input-container>
+                    <label>Subject *</label>
+                    <input type="text" ng-model="subject" name="subject" required />
+                    <div ng-messages="contactForm.subject.$error">
+                        <div ng-message="required">This is required!</div>
+                    </div>
+                </md-input-container>
 
-                <md-button ng-click="submit()" class="md-accent md-raised">Submit</md-button>
+                <md-input-container>
+                    <label>Message *</label>
+                    <textarea type="text" ng-model="message" name="message" required rows="5" md-maxlength="1000"></textarea>
+                </md-input-container>
+
+                <md-button id="submitButton" ng-click="submit()" class="md-accent md-raised">Submit</md-button>
             </form>
         </div>
 
         <div class="col-md-6">
-            <md-list>
-                <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages">
+            <md-list id="messageList">
+                <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages | orderBy:'-id'">
                     <div class="md-list-item-text">
                         <h3>{{message.name}} ({{message.email}})</h3>
                         <h4>{{message.subject}}</h4>
