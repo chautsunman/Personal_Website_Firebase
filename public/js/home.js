@@ -1,6 +1,8 @@
 app.controller("home", function($scope, $firebaseObject, $window) {
-    // header title
-    $("header .mdl-layout__title").html("Home");
+    angular.element(document).ready(function() {
+        // header title
+        $("header .mdl-layout__title").html("Home");
+    });
 
     var infoRef = firebase.database().ref().child("personalInfo");
 

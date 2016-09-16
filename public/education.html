@@ -1,35 +1,64 @@
-<div>
+<div id="education">
     <div id="highSchool">
         <h2>High School</h2>
 
         <div>
-            <h3>{{highSchool.name}}</h3>
-            <ul>
-                <li ng-repeat="subject in highSchool.subjects">{{subject}}</li>
-            </ul>
+            <h3>{{education.highSchool.name}}</h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Subjects studied:</h4>
+                    <ul>
+                        <li ng-repeat="subject in education.highSchool.subjects">{{subject}}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <iframe
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/  place?key=AIzaSyDWEOhWf5PpCGOB-Hf2FWBAsKTF68tJ9_o&q=Carmel+Secondary+School,Hong+Kong" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="universities">
         <h2>University / College</h2>
 
-        <div ng-repeat="university in universities">
+        <div ng-repeat="university in education.universities">
             <h3>{{university.name}}</h3>
-            <h4>{{university.degree}}</h4>
-            <h4>{{university.major}}</h4>
-            <ul>
-                <li ng-repeat="course in university.courses">{{course}}</li>
-            </ul>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Degree: {{university.degree}}</h4>
+                    <h4>Major: {{university.major}}</h4>
+                    <h4>Courses studied:</h4>
+                    <ul>
+                        <li ng-repeat="course in university.courses">{{course}}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <iframe
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/  place?key=AIzaSyDWEOhWf5PpCGOB-Hf2FWBAsKTF68tJ9_o&  q=The+Hong+Kong+University+Of+Science+And+Technology" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="onlineCourses">
         <h2>Online Courses</h2>
 
-        <div ng-repeat="onlineCourse in onlineCourses">
+        <div ng-repeat="onlineCourse in education.onlineCourses">
             <h3>{{onlineCourse.name}}</h3>
+            <h4>Courses studied:</h4>
             <ul>
-                <li ng-repeat="course in onlineCourse.courses">{{course}}</li>
+                <li ng-repeat="course in onlineCourse.courses"><a href="#" ng-click="openLink(course.link)">{{course.name}}</a></li>
             </ul>
         </div>
     </div>
