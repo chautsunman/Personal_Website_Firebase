@@ -10,3 +10,12 @@
 .mdl-layout__drawer-button>i {
     margin-top: 12px;
 }
+
+
+#cards .mdl-card {
+    width: 100%;
+}
+
+#cards .col-md-4 {
+    margin-bottom: 16px;
+}
