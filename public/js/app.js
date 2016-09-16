@@ -33,6 +33,14 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: "activities.html",
         controller: "activities"
     })
+    .when("/experience", {
+        templateUrl: "experience.html",
+        controller: "experience"
+    })
+    .when("/contact", {
+        templateUrl: "contact.html",
+        controller: "contact"
+    })
     .otherwise({
         template: "Error"
     });
