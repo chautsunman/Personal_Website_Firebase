@@ -47,6 +47,14 @@
     margin-top: 16px;
 }
 
+#contact .col-md-6 {
+    margin-bottom: 16px;
+}
+
+#contact #contactForm {
+    padding: 16px;
+}
+
 #contact #contactForm md-input-container {
     padding: 0px;
 }
