@@ -1,4 +1,4 @@
-.mdl-layout__content>div {
+#home, #activities, #experience, #contact {
     padding: 0px 32px;
 }
 

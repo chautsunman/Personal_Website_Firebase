@@ -12,16 +12,4 @@ app.controller("education", function($scope, $firebaseObject, $firebaseArray, $w
     $scope.openLink = function(link) {
         $window.open(link);
     };
-
-    $("#highSchool>h2").click(function() {
-        $("#highSchool>div").slideToggle("slow");
-    });
-
-    $("#universities>h2").click(function() {
-        $("#universities>div").slideToggle("slow");
-    });
-
-    $("#onlineCourses>h2").click(function() {
-        $("#onlineCourses>div").slideToggle("slow");
-    });
 });
