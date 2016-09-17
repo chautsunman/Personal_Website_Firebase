@@ -1,7 +1,7 @@
 <div id="contact">
     <div class="row">
         <div class="col-md-6">
-            <form id="contactForm" name="contactForm" action="#">
+            <form id="contactForm" name="contactForm">
                 <md-input-container>
                     <label>Name *</label>
                     <input type="text" ng-model="name" name="name" required />
@@ -32,7 +32,7 @@
                     <textarea type="text" ng-model="message" name="message" required rows="5" md-maxlength="1000"></textarea>
                 </md-input-container>
 
-                <md-button id="submitButton" ng-click="submit()" class="md-accent md-raised">Submit</md-button>
+                <md-button type="submit" id="submitButton" ng-click="submit()" class="md-accent md-raised">Submit</md-button>
             </form>
         </div>
 

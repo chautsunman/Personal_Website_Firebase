@@ -24,14 +24,14 @@ app.controller("contact", function($scope, $firebaseArray, $mdToast) {
             .then(function(ref) {
                 $mdToast.show(
                     $mdToast.simple()
-                    .textContent('Submitted message!')
+                    .textContent("Submitted message")
                     .position("top right")
                 );
             });
         } else {
             $mdToast.show(
                 $mdToast.simple()
-                .textContent('Invalid form!')
+                .textContent("Invalid form!")
                 .position("top right")
             );
         }
