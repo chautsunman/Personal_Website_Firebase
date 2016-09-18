@@ -1,13 +1,19 @@
 <div id="home">
-    <h1>{{personalInfo.firstName}} {{personalInfo.lastName}}</h1>
+    <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
 
-    <div class="row" ng-repeat="info in personalInfo.infos">
-        <div class="col-md-3">{{info.key}}</div>
-        <div class="col-md-9" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
-        <div class="col-md-9" ng-if="!info.link">{{info.value}}</div>
+    <div id="info">
+        <h1>{{personalInfo.firstName}} {{personalInfo.lastName}}</h1>
+
+        <div class="row" ng-repeat="info in personalInfo.infos">
+            <div class="col-md-3">{{info.key}}</div>
+            <div class="col-md-9" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
+            <div class="col-md-9" ng-if="!info.link">{{info.value}}</div>
+        </div>
     </div>
 
-    <div class="row" id="skills">
+    <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
+
+    <div id="skills" class="row">
         <div class="col-md-12">
             <h2>Skills</h2>
             <ul>
@@ -31,6 +37,8 @@
             </ul>
         </div>
     </div>
+
+    <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
 
     <div id="cards" class="row">
         <div class="col-md-4">

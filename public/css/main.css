@@ -1,4 +1,4 @@
-#home, #activities, #experience, #contact {
+#activities, #experience, #contact {
     padding: 0px 24px;
 }
 
@@ -11,6 +11,19 @@
     margin-top: 12px;
 }
 
+
+#home #info, #home #skills, #home #cards {
+    padding: 24px;
+}
+
+#home .parallax {
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #cards .mdl-card {
     width: 100%;
