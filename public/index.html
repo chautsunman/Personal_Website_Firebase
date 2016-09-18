@@ -36,23 +36,21 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/main.css"></link>
-
-    <!-- Initialize Firebase and AngularJS -->
-    <script type="text/javascript" src="/js/app.js"></script>
-
-    <!-- controllers -->
-    <script type="text/javascript" src="/js/home.js"></script>
-    <script type="text/javascript" src="/js/education.js"></script>
-    <script type="text/javascript" src="/js/activities.js"></script>
-    <script type="text/javascript" src="/js/experience.js"></script>
-    <script type="text/javascript" src="/js/contact.js"></script>
 </head>
 
 <body ng-app="personalWebsite">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout__title">Home</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a href="/home" class="mdl-navigation__link">Home</a>
+                    <a href="/education" class="mdl-navigation__link">Education</a>
+                    <a href="/activities" class="mdl-navigation__link">Activities</a>
+                    <a href="/experience" class="mdl-navigation__link">Work Experience</a>
+                    <a href="/contact" class="mdl-navigation__link">Contact Me</a>
+                </nav>
             </div>
         </header>
         <div class="mdl-layout__drawer">
@@ -69,5 +67,15 @@
             <div ng-view></div>
         </main>
     </div>
+
+    <!-- Initialize Firebase and AngularJS -->
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <!-- controllers -->
+    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="/js/education.js"></script>
+    <script type="text/javascript" src="/js/activities.js"></script>
+    <script type="text/javascript" src="/js/experience.js"></script>
+    <script type="text/javascript" src="/js/contact.js"></script>
 </body>
 </html>
