@@ -1,94 +1,101 @@
 <div id="home">
     <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
 
-    <div id="info">
-        <h1>{{personalInfo.firstName}} {{personalInfo.lastName}}</h1>
+    <div id="info" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <h1>{{personalInfo.firstName}} {{personalInfo.lastName}}</h1>
 
-        <div class="row" ng-repeat="info in personalInfo.infos">
-            <div class="col-md-3">{{info.key}}</div>
-            <div class="col-md-9" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
-            <div class="col-md-9" ng-if="!info.link">{{info.value}}</div>
+                <div class="row" ng-repeat="info in personalInfo.infos">
+                    <div class="col-md-3 col-sm-3">{{info.key}}</div>
+                    <div class="col-md-9 col-sm-9" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
+                    <div class="col-md-9 col-sm-9" ng-if="!info.link">{{info.value}}</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <img src="../images/profile.jpg" alt="Profile Picture">
+            </div>
         </div>
     </div>
 
     <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
 
-    <div id="skills" class="row">
-        <div class="col-md-12">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Full Stack Web Development</li>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>AngularJS</li>
-                        <li>Firebase</li>
-                        <li>Node.js</li>
-                        <li>SQL (MySQL)</li>
-                        <li>MongoDB</li>
-                        <li>Bootstrap</li>
-                        <li>Material Design (Material Design Lite)</li>
-                    </ul>
-                <li>Linux Command Line</li>
-                <li>Git and GitHub</li>
-            </ul>
-        </div>
+    <div id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Full Stack Web Development</li>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>AngularJS</li>
+                    <li>Firebase</li>
+                    <li>Node.js</li>
+                    <li>SQL (MySQL)</li>
+                    <li>MongoDB</li>
+                    <li>Bootstrap</li>
+                    <li>Material Design (Material Design Lite)</li>
+                </ul>
+            <li>Linux Command Line</li>
+            <li>Git and GitHub</li>
+        </ul>
     </div>
 
     <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="parallax"></div>
 
-    <div id="cards" class="row">
-        <div class="col-md-4">
-            <div class="mdl-card mdl-shadow--8dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">Education</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <ul>
-                        <li>Bachelor of Engineering in Computer Science</li>
-                        <li>Bachelor of Business Administration</li>
-                    </ul>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a href="/education" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Education</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mdl-card mdl-shadow--8dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">Activities</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <ul>
-                        <li>Google Code Jam</li>
-                        <li>Techcracker Exponential Learning Program</li>
-                        <li>...</li>
-                    </ul>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a href="/activities" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Activities</a>
+    <div id="cards" class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="mdl-card mdl-shadow--8dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Education</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul>
+                            <li>Bachelor of Engineering in Computer Science</li>
+                            <li>Bachelor of Business Administration</li>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="/education" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Education</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="mdl-card mdl-shadow--8dp">
-                <div class="mdl-card__title mdl-card--expand">
-                    <h2 class="mdl-card__title-text">Work Experience</h2>
+            <div class="col-md-4 col-sm-4">
+                <div class="mdl-card mdl-shadow--8dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Activities</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul>
+                            <li>Google Code Jam</li>
+                            <li>Techcracker Exponential Learning Program</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="/activities" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Activities</a>
+                    </div>
                 </div>
-                <div class="mdl-card__supporting-text">
-                    <ul>
-                        <li>Project Assistant</li>
-                        <li>...</li>
-                    </ul>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a href="/experience" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Work Experience</a>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="mdl-card mdl-shadow--8dp">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Work Experience</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul>
+                            <li>Project Assistant</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a href="/experience" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Work Experience</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -16,6 +16,10 @@
     padding: 24px;
 }
 
+#home #info h1, #home #skills h2 {
+    margin-top: 0px;
+}
+
 #home .parallax {
     height: 100%;
 
