@@ -6,7 +6,14 @@ app.controller("home", function($scope, $firebaseObject, $window) {
 
     var infoRef = firebase.database().ref().child("personalInfo");
 
-    $firebaseObject(infoRef).$bindTo($scope, "personalInfo");
+    var infoObj = $firebaseObject(infoRef);
+    infoObj.$loaded()
+    .then(function(data) {
+        $scope.personalInfo = data;
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
 
     // open a link in a new tab
     $scope.openLink = function(link) {

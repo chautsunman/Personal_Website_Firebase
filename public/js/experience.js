@@ -6,5 +6,14 @@ app.controller("experience", function($scope, $firebaseArray) {
 
     var experienceRef = firebase.database().ref().child("experience");
 
+    var experienceList = $firebaseArray(experienceRef);
+    experienceList.$loaded()
+    .then(function(data) {
+        $scope.experience = data;
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
     $scope.experience = $firebaseArray(experienceRef);
 });

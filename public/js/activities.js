@@ -6,5 +6,14 @@ app.controller("activities", function($scope, $firebaseArray) {
 
     var activityRef = firebase.database().ref().child("activities");
 
+    var activityList = $firebaseArray(activityRef);
+    activityList.$loaded()
+    .then(function(data) {
+        $scope.activities = data;
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
     $scope.activities = $firebaseArray(activityRef);
 });
