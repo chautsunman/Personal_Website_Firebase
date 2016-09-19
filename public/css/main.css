@@ -11,6 +11,11 @@
     margin-top: 12px;
 }
 
+footer.mdl-mini-footer .mdl-mini-footer__right-section i {
+    min-width: 36px;
+    text-align: center;
+}
+
 
 #home #info, #home #skills, #home #cards {
     padding: 24px;
