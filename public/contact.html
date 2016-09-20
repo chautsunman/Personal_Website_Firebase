@@ -30,7 +30,7 @@
 
                     <md-input-container>
                         <label>Message *</label>
-                        <textarea type="text" ng-model="message" name="message" required rows="5" md-maxlength="1000"></textarea>
+                        <textarea type="text" ng-model="message" name="message" required rows="5"></textarea>
                     </md-input-container>
 
                     <md-button type="submit" id="submitButton" ng-click="submit()" class="md-accent md-raised">Submit</md-button>
@@ -47,7 +47,6 @@
                             <h4>{{message.subject}}</h4>
                             <p>{{message.body}}</p>
                         </div>
-                    <md-divider ng-if="!$last"></md-divider>
                     </md-list-item>
                 </md-list>
             </div>

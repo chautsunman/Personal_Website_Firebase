@@ -1,7 +1,13 @@
-app.controller("education", function($scope, $firebaseObject, $window) {
+app.controller("education", function($scope, $firebaseObject, $window, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Education");
+
+        $mdToast.show(
+            $mdToast.simple()
+            .textContent("Swipe to navigate between tabs")
+            .position("bottom right")
+        );
     });
 
     var educationRef = firebase.database().ref().child("education");

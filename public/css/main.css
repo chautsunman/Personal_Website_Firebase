@@ -2,6 +2,10 @@
     padding: 0px 24px;
 }
 
+.mdl-layout__drawer {
+    padding-right: 16px;
+}
+
 .mdl-layout__drawer .mdl-layout__title {
     line-height: 32px;
     margin-top: 16px;
@@ -21,7 +25,7 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
     padding: 24px;
 }
 
-#home #info h1, #home #skills h2 {
+#home #info h3, #home #skills h3 {
     margin-top: 0px;
 }
 
@@ -59,7 +63,7 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
 }
 
 
-#activities table {
+#activities .table-responsive {
     width: 100%;
     margin-top: 16px;
 }
@@ -94,6 +98,14 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
 
 #contact #contactForm #submitButton {
     margin: 16px 0px 0px 0px;
+}
+
+#contact #messageList md-list-item {
+    overflow: auto;
+}
+
+#contact #messageList .md-list-item-text * {
+    white-space: normal;
 }
 
 

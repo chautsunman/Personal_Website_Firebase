@@ -1,5 +1,5 @@
 <div id="education">
-    <md-tabs md-dynamic-height>
+    <md-tabs md-dynamic-height md-swipe-content>
         <md-tab label="High School">
             <md-content class="md-padding">
                 <h3>{{education.highSchool.name}}</h3>
@@ -26,7 +26,7 @@
             </md-content>
         </md-tab>
 
-        <md-tab label="University / College">
+        <md-tab label="University">
             <md-content class="md-padding">
                 <div ng-repeat="university in education.universities">
                     <h3>{{university.name}}</h3>
