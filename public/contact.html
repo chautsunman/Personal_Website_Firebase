@@ -30,7 +30,10 @@
 
                     <md-input-container>
                         <label>Message *</label>
-                        <textarea type="text" ng-model="message" name="message" required rows="5"></textarea>
+                        <textarea type="text" ng-model="message" name="message" required rows="4"></textarea>
+                        <div ng-messages="contactForm.message.$error">
+                            <div ng-message="required">This is required!</div>
+                        </div>
                     </md-input-container>
 
                     <md-button type="submit" id="submitButton" ng-click="submit()" class="md-accent md-raised">Submit</md-button>
@@ -40,15 +43,18 @@
 
         <div class="col-md-6">
             <div md-whiteframe="8" id="messageList">
-                <md-list>
-                    <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages | orderBy:'-id'">
-                        <div class="md-list-item-text">
-                            <h3>{{message.name}} ({{message.email}})</h3>
-                            <h4>{{message.subject}}</h4>
-                            <p>{{message.body}}</p>
-                        </div>
-                    </md-list-item>
-                </md-list>
+                <md-content>
+                    <md-subheader class="md-primary">Messages</md-subheader>
+                    <md-list>
+                        <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages | orderBy:'-id'">
+                            <div class="md-list-item-text">
+                                <h3>{{message.subject}}</h3>
+                                <h4>{{message.name}} ({{message.email}})</h4>
+                                <p>{{message.body}}</p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
             </div>
         </div>
     </div>
