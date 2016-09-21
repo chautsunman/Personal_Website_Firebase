@@ -68,6 +68,10 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
     margin-top: 16px;
 }
 
+#activities .table-responsive table {
+    width: 100%;
+}
+
 
 #experience .mdl-card {
     width: 100%;
