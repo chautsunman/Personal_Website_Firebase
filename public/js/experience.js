@@ -1,7 +1,10 @@
-app.controller("experience", function($scope, $firebaseArray) {
+app.controller("experience", function($scope, $firebaseArray, $location, $anchorScroll) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Work Experience");
+
+        $location.hash("experience");
+        $anchorScroll();
     });
 
     var experienceRef = firebase.database().ref().child("experience");

@@ -1,7 +1,10 @@
-app.controller("education", function($scope, $firebaseObject, $window, $mdToast) {
+app.controller("education", function($scope, $firebaseObject, $window, $location, $anchorScroll, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Education");
+
+        $location.hash("education");
+        $anchorScroll();
 
         $mdToast.show(
             $mdToast.simple()

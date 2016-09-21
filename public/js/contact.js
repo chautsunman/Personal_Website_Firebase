@@ -1,7 +1,10 @@
-app.controller("contact", function($scope, $firebaseArray, $mdToast) {
+app.controller("contact", function($scope, $firebaseArray, $location, $anchorScroll, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Contact Me");
+
+        $location.hash("contact");
+        $anchorScroll();
     });
 
     function validForm() {
