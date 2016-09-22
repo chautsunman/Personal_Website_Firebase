@@ -1,10 +1,15 @@
-app.controller("contact", function($scope, $firebaseArray, $location, $anchorScroll, $mdToast) {
+app.controller("contact", function($scope, $firebaseArray, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Contact Me");
 
-        $location.hash("contact");
-        $anchorScroll();
+        // close the sidenav
+        if ($(".mdl-layout__drawer.is-visible").length === 1) {
+            $(".mdl-layout")[0].MaterialLayout.toggleDrawer();
+        }
+
+        // scroll to the top of the page
+        $("main.mdl-layout__content").scrollTop(0);
     });
 
     function validForm() {

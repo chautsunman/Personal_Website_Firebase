@@ -1,10 +1,15 @@
-app.controller("education", function($scope, $firebaseObject, $window, $location, $anchorScroll, $mdToast) {
+app.controller("education", function($scope, $firebaseObject, $window, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Education");
 
-        $location.hash("education");
-        $anchorScroll();
+        // close the sidenav
+        if ($(".mdl-layout__drawer.is-visible").length === 1) {
+            $(".mdl-layout")[0].MaterialLayout.toggleDrawer();
+        }
+
+        // scroll to the top of the page
+        $("main.mdl-layout__content").scrollTop(0);
 
         $mdToast.show(
             $mdToast.simple()

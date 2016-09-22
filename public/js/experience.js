@@ -1,10 +1,15 @@
-app.controller("experience", function($scope, $firebaseArray, $location, $anchorScroll) {
+app.controller("experience", function($scope, $firebaseArray) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Work Experience");
 
-        $location.hash("experience");
-        $anchorScroll();
+        // close the sidenav
+        if ($(".mdl-layout__drawer.is-visible").length === 1) {
+            $(".mdl-layout")[0].MaterialLayout.toggleDrawer();
+        }
+
+        // scroll to the top of the page
+        $("main.mdl-layout__content").scrollTop(0);
     });
 
     var experienceRef = firebase.database().ref().child("experience");
