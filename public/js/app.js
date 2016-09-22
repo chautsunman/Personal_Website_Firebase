@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 var app = angular.module("personalWebsite", ["ngRoute", "firebase", "ngMaterial", "ngMessages"]);
 
 // routing
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider
     .when("/", {
         templateUrl: "home.html",
@@ -46,4 +46,8 @@ app.config(function($routeProvider, $locationProvider) {
     });
 
     $locationProvider.html5Mode(true);
+
+
+    $mdThemingProvider.theme("default")
+        .accentPalette("orange");
 });

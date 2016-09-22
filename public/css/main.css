@@ -106,8 +106,8 @@
 
 
 md-toast {
-    background-color: rgb(255,64,129);
+    background-color: #FFAB40;
 }
 md-toast .md-toast-content {
-    background-color: rgb(255,64,129) !important;
+    background-color: #FFAB40 !important;
 }
