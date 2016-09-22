@@ -1,6 +1,11 @@
 <div id="contact" class="container-fluid">
     <div class="row">
         <div class="col-md-6">
+            <md-toolbar layout="row" class="md-accent">
+                <div class="md-toolbar-tools">
+                    <span>Contact Form</span>
+                </div>
+            </md-toolbar>
             <div md-whiteframe="8" id="contactForm">
                 <form name="contactForm">
                     <md-input-container>
@@ -41,20 +46,20 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div md-whiteframe="8" id="messageList">
-                <md-content>
-                    <md-subheader class="md-primary">Messages</md-subheader>
-                    <md-list>
-                        <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages | orderBy:'-id'">
-                            <div class="md-list-item-text">
-                                <h3>{{message.subject}}</h3>
-                                <h4>{{message.name}} ({{message.email}})</h4>
-                                <p>{{message.body}}</p>
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                </md-content>
+        <div class="col-md-6" id="messageList">
+            <md-toolbar layout="row" class="md-accent">
+                <div class="md-toolbar-tools">
+                    <span>Messages (subject and message)</span>
+                </div>
+            </md-toolbar>
+            <div class="mdl-card" ng-repeat="message in messages | orderBy:'-id'">
+                <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">{{message.subject}}</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    {{message.body}}
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
             </div>
         </div>
     </div>

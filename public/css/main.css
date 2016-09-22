@@ -15,11 +15,6 @@
     margin-top: 12px;
 }
 
-footer.mdl-mini-footer .mdl-mini-footer__right-section i {
-    min-width: 36px;
-    text-align: center;
-}
-
 
 #home #info, #home #skills, #home #cards {
     padding: 24px;
@@ -94,7 +89,6 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
 
 #contact #contactForm {
     padding: 16px;
-    min-height: 80%;
 }
 
 #contact #contactForm md-input-container {
@@ -105,17 +99,9 @@ footer.mdl-mini-footer .mdl-mini-footer__right-section i {
     margin: 16px 0px 0px 0px;
 }
 
-#contact #messageList md-content {
-    min-height: 50%;
-    max-height: 80%;
-}
-
-#contact #messageList md-list-item {
-    overflow: auto;
-}
-
-#contact #messageList .md-list-item-text * {
-    white-space: normal;
+#contact #messageList .mdl-card {
+    width: 100%;
+    margin-bottom: 16px;
 }
 
 
