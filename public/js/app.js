@@ -41,6 +41,10 @@ app.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
         templateUrl: "contact.html",
         controller: "contact"
     })
+    .when("/photos", {
+        templateUrl: "photos.html",
+        controller: "photos"
+    })
     .otherwise({
         template: "Error"
     });
