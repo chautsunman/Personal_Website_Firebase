@@ -1,4 +1,4 @@
-#activities, #experience, #contact {
+#activities, #experience, #photos, #contact {
     padding: 0px 24px;
 }
 
@@ -80,6 +80,20 @@
 #experience .mdl-card h3 {
     font-size: 1rem;
     margin: 0px;
+}
+
+
+#photos md-grid-list {
+    width: 100%;
+}
+
+#photos md-grid-list md-grid-tile div {
+    width: 100%;
+    height: 100%;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
