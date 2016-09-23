@@ -10,5 +10,14 @@ app.controller("photos", function($scope) {
 
         // scroll to the top of the page
         $("main.mdl-layout__content").scrollTop(0);
+
+        $('#photos md-grid-list md-grid-tile div').click(function() {
+            var image = $(this);
+            var imageUrl = image.css("background-image").substring(5, image.css("background-image").length-2);
+
+            $("#photoModal img").attr("src", imageUrl);
+
+            $("#photoModal").modal();
+        });
     });
 });

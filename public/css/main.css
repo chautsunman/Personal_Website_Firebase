@@ -96,6 +96,10 @@
     background-repeat: no-repeat;
 }
 
+#photoModal img {
+    width: 100%;
+}
+
 
 #contact .row {
     margin-top: 16px;
