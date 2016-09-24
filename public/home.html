@@ -7,10 +7,12 @@
                 <h3>{{personalInfo.firstName}} {{personalInfo.lastName}}</h3>
 
                 <div class="row" ng-repeat="info in personalInfo.infos">
-                    <div class="col-md-3 col-sm-3">{{info.key}}</div>
-                    <div class="col-md-9 col-sm-9" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
-                    <div class="col-md-9 col-sm-9" ng-if="!info.link">{{info.value}}</div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">{{info.key}}</div>
+                    <div class="col-md-8 col-sm-8 col-xs-8" ng-if="info.link"><a href="#" ng-click="openLink(info.link)">{{info.value}}</a></div>
+                    <div class="col-md-8 col-sm-8 col-xs-8" ng-if="!info.link">{{info.value}}</div>
                 </div>
+
+                <br>
             </div>
             <div class="col-md-6 col-sm-6">
                 <img id="profileImg" src="../images/profile.png" alt="Profile Picture">
@@ -18,7 +20,7 @@
         </div>
     </div>
 
-    <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="homeImg"></div>
+    <div style="background-image: url('../images/IMG-20150911-WA0000.jpg')" class="homeImg"></div>
 
     <div id="skills">
         <h3>Skills</h3>
@@ -50,7 +52,7 @@
         </div>
     </div>
 
-    <div style="background-image: url('../images/IMG_20150926_223227.jpg')" class="homeImg"></div>
+    <div style="background-image: url('../images/IMG-20160908-WA0000.jpg')" class="homeImg"></div>
 
     <div id="cards" class="container-fluid">
         <div class="row">

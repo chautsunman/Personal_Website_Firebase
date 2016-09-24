@@ -25,14 +25,14 @@
 }
 
 #home #profileImg {
-    width: 50%;
+    width: 33%;
 }
 
 #home .homeImg {
     width: 100%;
     height: 64%;
 
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
