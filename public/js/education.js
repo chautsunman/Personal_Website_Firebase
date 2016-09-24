@@ -14,7 +14,7 @@ app.controller("education", function($scope, $firebaseObject, $window, $mdToast)
         $mdToast.show(
             $mdToast.simple()
             .textContent("Swipe to navigate between tabs")
-            .position("bottom right")
+            .position("top right")
         );
     });
 

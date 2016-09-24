@@ -33,14 +33,14 @@ app.controller("contact", function($scope, $firebaseArray, $mdToast) {
                 $mdToast.show(
                     $mdToast.simple()
                     .textContent("Submitted message")
-                    .position("bottom right")
+                    .position("top right")
                 );
             });
         } else {
             $mdToast.show(
                 $mdToast.simple()
                 .textContent("Invalid form!")
-                .position("bottom right")
+                .position("top right")
             );
         }
     };

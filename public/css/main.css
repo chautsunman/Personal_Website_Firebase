@@ -1,5 +1,5 @@
 #activities, #experience, #photos, #contact {
-    padding: 0px 24px;
+    padding: 16px 24px;
 }
 
 .mdl-layout__drawer {
@@ -24,11 +24,15 @@
     margin-top: 0px;
 }
 
+#home #profileImg {
+    width: 50%;
+}
+
 #home .homeImg {
     width: 100%;
-    height: 66%;
+    height: 64%;
 
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -44,42 +48,40 @@
     }
 }
 
-#cards .mdl-card {
+#home #cards .mdl-card {
     width: 100%;
 }
 
-#cards .col-md-4 {
+#home #cards .col-md-4 {
     margin-bottom: 16px;
 }
 
 
-#education h1, #education h2, #education h3, #education h4 {
-    margin: 8px 0px;
+#education h3 {
+    margin: 4px 0px;
+}
+
+#education h4 {
+    margin: 0px;
+}
+
+#education .row {
+    margin-bottom: 4px;
 }
 
 
-#activities .table-responsive {
+#activities .table-responsive, #activities .table-responsive table {
     width: 100%;
-    margin-top: 16px;
 }
 
-#activities .table-responsive table {
-    width: 100%;
-}
-
-
-#experience {
-    margin-top: 16px;
-}
 
 #experience .mdl-card {
     width: 100%;
     margin-bottom: 16px;
 }
 
-#experience .mdl-card h3 {
-    font-size: 1rem;
-    margin: 0px;
+#experience .mdl-card .row {
+    margin-bottom: 4px;
 }
 
 
@@ -97,13 +99,9 @@
 }
 
 #photoModal img {
-    width: 100%;
+    max-width: 100%;
 }
 
-
-#contact .row {
-    margin-top: 16px;
-}
 
 #contact .col-md-6 {
     margin-bottom: 16px;

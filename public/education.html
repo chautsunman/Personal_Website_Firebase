@@ -8,6 +8,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h4>Year: {{education.highSchool.year}}</h4>
+                            <br>
                             <h4>Subjects studied:</h4>
                             <ul>
                                 <li ng-repeat="subject in education.highSchool.subjects">{{subject}}</li>
@@ -34,9 +35,31 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>Year: {{university.year}}</h4>
-                                <h4>Degree: {{university.degree}}</h4>
-                                <h4>Major: {{university.major}}</h4>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Year:</h4>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <h4>{{university.year}}</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Degree:</h4>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <h4>{{university.degree}}</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h4>Major:</h4>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <h4>{{university.major}}</h4>
+                                    </div>
+                                </div>
+                                <br>
                                 <h4>Courses studied:</h4>
                                 <ul>
                                     <li ng-repeat="course in university.courses">{{course}}</li>
