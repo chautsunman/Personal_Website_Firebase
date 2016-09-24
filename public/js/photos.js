@@ -1,4 +1,4 @@
-app.controller("photos", function($scope) {
+app.controller("photos", function($scope, $mdToast) {
     angular.element(document).ready(function() {
         // header title
         $("header .mdl-layout__title").html("Photos");
@@ -10,6 +10,12 @@ app.controller("photos", function($scope) {
 
         // scroll to the top of the page
         $("main.mdl-layout__content").scrollTop(0);
+
+        $mdToast.show(
+            $mdToast.simple()
+            .textContent("Click on any photo to view a larger version")
+            .position("top right")
+        );
 
         $('#photos md-grid-list md-grid-tile div').click(function() {
             var image = $(this);
